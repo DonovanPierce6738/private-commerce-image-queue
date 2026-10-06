@@ -1,0 +1,2 @@
+"""Order image queue example."""
+

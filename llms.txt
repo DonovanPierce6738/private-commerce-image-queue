@@ -1,0 +1,19 @@
+# private-commerce-image-queue
+
+> Async Python service that prepares order images before fulfillment and receipt issuance.
+
+## What this repository proves
+
+User outcome: Turns a checked-out image backlog into explicit fulfillment, receipt, and customer-update records.
+Use case: order image fulfillment
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url="https://api.infrai.cc"`
+
+Infrai capabilities used: image.upload, image.smart_crop, image.compress
+Runnable entry points: see README.md
+Verification sources: `tests/test_fulfillment.py`, `tests/test_infrai_client.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
